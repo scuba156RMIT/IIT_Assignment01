@@ -121,6 +121,21 @@
 
     <h2>Personal Profile</h2>
 
+    <figure class="figure-center" style="height:25%;">
+      <span style="height:100%;">
+      <img src="images/myers-briggs-type.png" alt="Myers-Briggs type" style="height:100%; width:100%;">
+    </span>
+      <figcaption>My Myers-Briggs personality type</figcaption>
+    </figure>
+
+    <figure class="figure-right" style="width:32%; height:45%">
+      <!-- <span style="height:91.5%"> -->
+          <img style="height=90%" src="images/myers-briggs-breakdown.png" alt="Myers-Briggs breakdown" >
+      <!-- </span> -->
+      <figcaption>Myers-Briggs breakdown</figcaption>
+    </figure>
+    <!-- <div class="clearfix"></div> -->
+
     <p>I feel that these results line up pretty well with what I have
     experienced throughout my life so far, with being an extremely introverted
     and shy person but also enjoying the occasional company of others. I am
@@ -134,5 +149,59 @@
     me to rely on others for these areas while I bring my own set of skills to
     contribute to the team.</p>
   </div>
+
+  <div id="test1" class="tab-content active">This is content. blah <p> blah again</p></div>
+  <div id="test2" class="tab-content">
+    <figure class="figure-center" style="height:25%;">
+      <span style="height:100%;">
+      <img src="images/myers-briggs-type.png" alt="Myers-Briggs type" style="height:100%; width:100%;">
+    </span>
+      <figcaption>My Myers-Briggs personality type</figcaption>
+    </figure>
+  </div>
+  <div id="test3" class="tab-content">This is a test3</div>
+  <div id="test4" class="tab-content">This is a test4</div>
+
+
+  <button id="test1" class="tab-button active" onclick="toggleActiveTab('test1', this)">Try it a large button</button>
+  <button id="test2" class="tab-button" onclick="toggleActiveTab('test2', this)">Test</button>
+  <button id="test3" class="tab-button" onclick="toggleActiveTab('test3', this)">Test</button>
+  <button id="test4" class="tab-button" onclick="toggleActiveTab('test4', this)">Test</button>
+
+  <script>
+    function toggleActiveTab(id, sender) {
+      if (sender.classList.contains("active")) {
+        return;
+      }
+
+      var allTabs = document.getElementsByClassName("tab-content");
+      var allTabButtons = document.getElementsByClassName("tab-button");
+      //var senderButton = sender;
+
+      sender.classList.add("active");
+
+      for (var i = 0; i < allTabs.length; i++) {
+        if (allTabs[i].id == id && !allTabs[i].classList.contains("active")) {
+          allTabs[i].classList.add("active");
+        } else {
+          allTabs[i].classList.remove("active");
+        }
+
+        if (allTabs[i].classList.contains("active")) {
+          allTabs[i].style.display = "block";
+        } else {
+          allTabs[i].style.display = "none";
+        }
+      }
+
+      for (var i = 0; i < allTabButtons.length; i++) {
+        if (allTabButtons[i].id == id) {
+          allTabButtons[i].classList.add("active");
+        } else {
+          allTabButtons[i].classList.remove("active");
+        }
+      }
+    }
+</script>
 </body>
 </html>

@@ -53,15 +53,19 @@ figcaption a {
   color: #f2f2f2;
 }
 
+.clearfix::before, .clearfix::after {
+    display: block;
+    content: "";
+}
+.clearfix::after {
+    clear: both;
+}
+
 figure {
     padding: 5px;
     display: flex;
     flex-flow: column;
     border: thin #333 solid;
-    /* margin: 5px; */
-    /* padding: 5px; */
-    /* height:auto; */
-    /* margin: auto; */
 }
 
 .figure-right {
@@ -72,6 +76,11 @@ figure {
 .figure-left {
   float:left;
   margin: auto 20px 20px 0px;
+}
+
+.figure-center {
+  float: none;
+  align-self: center;
 }
 
 .content {
@@ -104,7 +113,36 @@ figure {
   color: black;
 }
 
+.tab-button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  margin: none;
+  float:left;
+  background-color: #333;
+  color: #f2f2f2;
+  /* font-size: 16px; */
+}
+
+.tab-button.active {
+  background: #ddd;
+  color: black;
+}
+
+.tab-content.active {
+  /* color:blue; */
+  /* background-color: #4CAF50; /* Green */ */
+}
+
 /* Main content */
 .main {
   margin-top: 30px;
+}
+
+.tab-content:not(.active) {
+  display: none;
 }
