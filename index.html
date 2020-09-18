@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Assignment 1</title>
   <link rel="stylesheet" href="main.css">
-  <script type="text/javascript" src="javascript.js"></script>
 </head>
 
 <body>
@@ -154,38 +153,56 @@
       contribute to the team.</p>
   </div>
 
-  <div class="tabs">
-    <div id="test1" class="tab-content active">
-      <figure class="figure-center" style="height:25%;">
+  <div class="tabs clearfix">
+    <div id="tab1" class="tab-content active">
+      <figure class="figure-bottom img-thumbnail" style="height:25%;">
         <span style="height:100%;">
-          <img src="images/big-5-personality-scores.png" alt="Big 5 Personality Scores" style="height:100%; width:100%;">
+          <a target="_blank" href="images/myers-briggs-type.png">
+            <img src="images/myers-briggs-type.png" alt="Myers-Briggs Type" style="height:100%; width:100%;">
+          </a>
+        </span>
+        <figcaption>Myers-Briggs Type</figcaption>
+      </figure>
+    </div>
+    <div id="tab2" class="tab-content">
+      <figure class="figure-bottom img-thumbnail" style="height:25%;">
+        <span style="height:100%;">
+          <a target="_blank" href="images/big-5-personality-scores.png">
+            <img src="images/big-5-personality-scores.png" alt="Big 5 Personality Scores" style="height:100%; width:100%;">
+          </a>
         </span>
         <figcaption>Big 5 Personality Scores</figcaption>
       </figure>
     </div>
-    <div id="test2" class="tab-content">
-      <figure class="figure-center" style="height:25%;">
+    <div id="tab3" class="tab-content">
+      <figure class="figure-bottom img-thumbnail" style="height:25%;">
         <span style="height:100%;">
-          <img src="images/big-5-personality-breakdown.png" alt="Big 5 Personality Breakdown" style="height:100%; width:100%;">
+          <a target="_blank" href="images/big-5-personality-breakdown.png">
+            <img src="images/big-5-personality-breakdown.png" alt="Big 5 Personality Breakdown" style="height:100%; width:100%;">
+          </a>
         </span>
         <figcaption>Big 5 Personality Breakdown</figcaption>
       </figure>
     </div>
-    <div id="test3" class="tab-content">
-      <figure class="figure-center" style="height:25%;">
+    <div id="tab4" class="tab-content">
+      <figure class="figure-bottom img-thumbnail" style="height:25%;">
         <span style="height:100%;">
-          <img src="images/big-5-personality-breakdown.png" alt="Big 5 Personality Breakdown" style="height:100%; width:100%;">
+          <a target="_blank" href="images/learning-style-1.png">
+            <img src="images/learning-style-1.png" alt="Learning Style" style="height:100%; width:100%;">
+          </a>
         </span>
-        <figcaption>Big 5 Personality Breakdown</figcaption>
+        <figcaption>Learning Style</figcaption>
       </figure>
     </div>
-
-
-    <button id="test1" class="tab-button active" onclick="toggleActiveTab('test1', this)">Big 5 Scores</button>
-    <button id="test2" class="tab-button" onclick="toggleActiveTab('test2', this)">Big 5 Breakdown</button>
-    <button id="test3" class="tab-button" onclick="toggleActiveTab('test3', this)">Learning Style</button>
-
+    <div class="button-area">
+      <button id="tab1" class="tab-button active" onclick="toggleActiveTab('tab1', this)">Myers-Briggs</button>
+      <button id="tab2" class="tab-button" onclick="toggleActiveTab('tab2', this)">Big 5 Scores</button>
+      <button id="tab3" class="tab-button" onclick="toggleActiveTab('tab3', this)">Big 5 Breakdown</button>
+      <button id="tab4" class="tab-button" onclick="toggleActiveTab('tab4', this)">Learning Style</button>
+    </div>
   </div>
-</body>
 
+  <button onclick="topFunction()" id="scrollToTop" title="Back to top">Back To Top</button>
+</body>
+<script type="text/javascript" src="javascript.js"></script>
 </html>
